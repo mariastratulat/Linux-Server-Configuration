@@ -1,5 +1,5 @@
 # Linux Server Configuration
-Public IP: 35.176.110.99
+Public IP: 35.177.39.254
 SSH Port: 2200
 
 
@@ -108,7 +108,7 @@ if __name__ == "__main__":
   from catalog import app as application
   application.secret_key = 'Add your secret key'
  25. *sudo service apache2 restart*
- 26. Go to your browser and type *http://35.176.110.99/*. Hello, User!!!
+ 26. Go to your browser and type *http://35.177.39.254/*. Hello, User!!!
 # Setup the Item Catalog project
   1. *sudo chown -R grader /var/www*
   2. *git clone https://github.com/mariastratulat/Item-Catalog.git*. Move the content to /var/www/catalog/catalog and delete the Item-Catalog directory.
@@ -132,10 +132,10 @@ if __name__ == "__main__":
   19. *\q* and *exit*
   20. Run *python database_setup.py* from catalog directory
   21. Restart apache2 *sudo service apache2 restart*
-  22. Open in your browser [http://35.176.110.99/]
-  23. *sudo nano /etc/apache2/sites-available/catalo.conf* and add *ServerAlias HOSTNAME ec2-35-176-110-99.eu-west-2.compute.amazonaws.com* below ServerAdmin.
-  24. Go to [https://console.developers.google.com/cloud-resource-manager] and add *htts://35.176.110.99* to Authorized JavaScript origins and *http://ec2-35-176-110-99.eu-west-2.compute.amazonaws.com* to Authorized redirect URIs (APIs& auth>Credentials>Edit)
-  25. Go to [https://developers.facebook.com/apps]. In Facebook Login > Settings > Valid OAuth redirect URIs add *http://35.176.110.99/* 
+  22. Open in your browser [http://35.177.39.254/]
+  23. *sudo nano /etc/apache2/sites-available/catalog.conf* and add *ServerAlias HOSTNAME ec2-35-177-39-254.eu-west-2.compute.amazonaws.com* below ServerAdmin.
+  24. Go to [https://console.developers.google.com/cloud-resource-manager] and add *http://35.177.39.254* to Authorized JavaScript origins and *http://ec2-35-177-39-254.eu-west-2.compute.amazonaws.com* to Authorized redirect URIs (APIs& auth>Credentials>Edit)
+  25. Go to [https://developers.facebook.com/apps]. In Facebook Login > Settings > Valid OAuth redirect URIs add *http://35.177.39.254/* 
   26. To see the errors details *sudo tail /var/log/apache2/error.log*
   27. Run *python modelsinfo.py* to populate the database. It works! Ok, almost. Open __init__.py and modify in fbconnect and gconnect functions with the full path oc secrets files(fb_client_secrets.json and client_secrets.json)
   28. *sudo service apache2 restart*
