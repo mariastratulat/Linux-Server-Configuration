@@ -1,6 +1,7 @@
 # Linux Server Configuration
-Public IP: 35.177.39.254
-SSH Port: 2200
+  Public IP: 35.177.39.254
+  SSH Port: 2200
+  http://ec2-35-177-39-254.eu-west-2.compute.amazonaws.com
 
 
 
